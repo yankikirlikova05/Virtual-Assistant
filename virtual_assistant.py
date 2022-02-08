@@ -42,10 +42,10 @@ while True:
             else:
                 minute = str(now.minute)
 
+            response = response+' '+'It is  '+str(hour)+':'+minute+' .'
+
         # TEST NEEDED
         elif ('add wake word' in text):
             text.lower()
             audio.addWakeWord(text[14:-1])
-
-            response = response+' '+'It is  '+str(hour)+':'+minute+' .'
         audio.assistantResponse(response)
